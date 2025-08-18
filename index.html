@@ -128,39 +128,104 @@
         <!--                  Services                    -->
         <!-- ============================================ -->
 
-        <div class="card">
-            <picture>
-                <img aria-hidden="true" decoding="async" src="/images/service1.svg" alt="Wasserbar" width="48" height="48">
-            </picture>
-            <h2>Wasserbar</h2>
-            <p>
-                Mit der <strong>Mini Touch</strong> und <strong>Flexible Touch Wasserbar</strong> erhältst du reines, 
-                gefiltertes Trinkwasser durch modernste <strong>Umkehrosmose-Technologie</strong> – kompakt, flexibel und ohne Wasserkisten schleppen.
-            </p>
-        </div>
-        
-        <div class="card">
-            <picture>
-                <img aria-hidden="true" decoding="async" src="/images/service2.svg" alt="Aqua-Global Drops" width="48" height="48">
-            </picture>
-            <h2>Drops</h2>
-            <p>
-                Die <strong>Aqua-Global Drops</strong> ermöglichen dir die individuelle Mineralisierung deines Wassers. 
-                Ob Magnesium, Calcium oder andere Mineralstoffe – du entscheidest, was in dein Glas kommt.
-            </p>
-        </div>
-        
-        <div class="card">
-            <picture>
-                <img aria-hidden="true" decoding="async" src="/images/service3.svg" alt="Händler werden" width="48" height="48">
-            </picture>
-            <h2>Selber Händler werden</h2>
-            <p>
-                Starte dein eigenes Geschäft als <strong>Aqua-Global Partner</strong>. 
-                Profitiere von attraktiven Preisvorteilen, einem starken Netzwerk und hoher Nachfrage nach Wasserfiltern.
-            </p>
-        </div>
-        
+        <section class="services-section">
+            <div class="services-cards">
+                <div class="card">
+                    <picture>
+                        <img aria-hidden="true" decoding="async" src="/images/service1.svg" alt="Wasserbar" width="48" height="48">
+                    </picture>
+                    <h2>Wasserbar</h2>
+                    <p>
+                        Mit der <strong>Mini Touch</strong> und <strong>Flexible Touch Wasserbar</strong> erhältst du reines, 
+                        gefiltertes Trinkwasser durch modernste <strong>Umkehrosmose-Technologie</strong> – kompakt, flexibel und ohne Wasserkisten schleppen.
+                    </p>
+                </div>
+                <div class="card">
+                    <picture>
+                        <img aria-hidden="true" decoding="async" src="/images/service2.svg" alt="Aqua-Global Drops" width="48" height="48">
+                    </picture>
+                    <h2>Drops</h2>
+                    <p>
+                        Die <strong>Aqua-Global Drops</strong> ermöglichen dir die individuelle Mineralisierung deines Wassers. 
+                        Ob Magnesium, Calcium oder andere Mineralstoffe – du entscheidest, was in dein Glas kommt.
+                    </p>
+                </div>
+                <div class="card">
+                    <picture>
+                        <img aria-hidden="true" decoding="async" src="/images/service3.svg" alt="Händler werden" width="48" height="48">
+                    </picture>
+                    <h2>Selber Händler werden</h2>
+                    <p>
+                        Starte dein eigenes Geschäft als <strong>Aqua-Global Partner</strong>. 
+                        Profitiere von attraktiven Preisvorteilen, einem starken Netzwerk und hoher Nachfrage nach Wasserfiltern.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <style>
+            .services-section {
+                padding: 3rem 0 2rem 0;
+                background: #f8fafc;
+            }
+            .services-cards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                justify-content: center;
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+            .services-cards .card {
+                background: #fff;
+                border-radius: 1.2rem;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+                padding: 2rem 1.5rem 1.5rem 1.5rem;
+                flex: 1 1 300px;
+                max-width: 340px;
+                min-width: 260px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                transition: transform 0.18s, box-shadow 0.18s;
+            }
+            .services-cards .card:hover {
+                transform: translateY(-8px) scale(1.03);
+                box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+            }
+            .services-cards .card picture {
+                margin-bottom: 1.2rem;
+            }
+            .services-cards .card h2 {
+                font-size: 1.25rem;
+                margin-bottom: 0.7rem;
+                color: #1a365d;
+                font-weight: 700;
+            }
+            .services-cards .card p {
+                font-size: 1rem;
+                color: #334155;
+                line-height: 1.6;
+            }
+            @media (max-width: 900px) {
+                .services-cards {
+                    gap: 1.2rem;
+                }
+                .services-cards .card {
+                    max-width: 100%;
+                }
+            }
+            @media (max-width: 700px) {
+                .services-cards {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .services-cards .card {
+                    width: 90%;
+                    min-width: unset;
+                }
+            }
+        </style>
 
 
         <!-- ============================================ -->
@@ -245,7 +310,7 @@
                         </li>
                         <li>
                             <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
-                            <span><strong>Direkte Zusammenarbeit mit Iwan Schneider:</strong> Lerne von einem erfahrenen Partner mit über 10 Jahren Expertise.</span>
+                            <span><strong>Direkte Zusammenarbeit mit Iwan Schneider:</strong> Lerne von einem erfahrenen Partner mit Expertise.</span>
                         </li>
                     </ul>
                     <p>
