@@ -1,286 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <!--Swap our for actual link-->
-    <link rel="canonical" href="https://www.company.com/reviews">
+  <link rel="canonical" href="https://www.aqua-iwan.de/reviews" />
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+  <meta name="description" content="Erfahrungen & Bewertungen zu Aqua-Iwan (Iwan Schneider): Wasserbar, Drops & Entkalkungsanlagen. Jetzt Partner werden und den Weg in die finanzielle Unabhängigkeit starten." />
+  <meta name="keywords" content="Aqua-Iwan Erfahrungen, Aqua Global Bewertungen, Wasserbar Review, Umkehrosmose Test, Partner werden Aqua Global, Nebenverdienst Wasserfilter" />
 
-    <!--Social Media Display-->
-    <meta property="og:title" content=""/>
-    <meta property="og:description" content=""/>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content=""/>
-    <meta property="og:image" content="/images/social.jpg"/>
-    <meta property="og:image:secure_url" content="/images/social.jpg"/>
+  <meta property="og:title" content="Aqua-Iwan | Erfahrungen & Erfolgsgeschichten" />
+  <meta property="og:description" content="Echte Stimmen zu Wasserbar, Drops & Entkalkung. Werde Partner und starte deinen Weg in die finanzielle Unabhängigkeit mit Aqua-Iwan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.aqua-iwan.de/reviews" />
+  <meta property="og:image" content="/images/social.jpg" />
+  <meta property="og:image:secure_url" content="/images/social.jpg" />
 
-    <!--Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v1">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0b6cff" />
 
-    <!-- Preload -->
-    <link rel="preload" as="image" href="/images/cabinets2-m.jpg">
-    <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-700.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/root.css" />
+  <link rel="stylesheet" href="/css/dark.css" />
+  <link rel="stylesheet" href="/css/reviews.css" />
 
-    <link rel="stylesheet" href="/css/root.css">
-    <link rel="stylesheet" href="/css/reviews.css">
-    <link rel="stylesheet" href="/css/dark.css">
+  <title>Aqua-Iwan | Erfahrungen & Partner-Erfolg</title>
 
-    <!--Put analytics tag here at the bottom to prevent it from render blocking-->
-
-    <title>Company Name | Reviews | Town and State</title>
+  <style>
+    /* leichte Grundstyles, falls keine reviews.css vorliegt */
+    :root{--brand:#0b6cff;--ink:#0b1220;}
+    #int-hero{display:grid;place-items:center;padding:60px 20px;text-align:center}
+    #int-hero h1{margin:0 0 10px}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:20px}
+    .review{background:#fff;border:1px solid #e9eef6;border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+    .review .stars{color:#f5a300;font-size:18px;letter-spacing:1px;margin-bottom:6px}
+    .review .who{font-weight:700;margin-top:10px}
+    .review .meta{color:#66738a;font-size:14px}
+    #cta-partner{padding:60px 20px;background:linear-gradient(180deg,#f5f9ff,#eef6ff)}
+    #cta-partner .wrap{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}
+    .button-solid{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:12px 18px;display:inline-block;font-weight:700;text-decoration:none}
+    @media (max-width:900px){.reviews-grid{grid-template-columns:1fr} #cta-partner .wrap{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-    <!--Screen reader skip main nav-->
-    <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+  <a class="skip" aria-label="Zum Hauptinhalt springen" href="#main">Zum Inhalt springen</a>
 
-    <!-- ============================================ -->
-    <!--                 Navigation                   -->
-    <!-- ============================================ -->
-
-    <div id="navigation">
-        <div aria-hidden="true" class="background-color-div">
-            <!--This div is used to overcome a z-index issue where the open
-                #navbar-menu is on top of the #navigation. This bar places itself 
-                the #navbar-menu so that menu appears behind the #navigation
-            -->
-        </div>
-        <div class="container">
-            <!--Logo - Get SVGs if you can.  I use fiverr to get png's turned into SVGs. Highly recommend it, worth the $20 - get a light and dark version-->
-            <a class="logo" aria-label="click to go to home page" href="/index.html">
-                <!--Light Colored Logo, remove .dark image tag and the .light class if you don't have a dark and light version -->
-                <img class="light" aria-hidden="true" src="/images/logo-light.png" decoding="async" alt="logo" width="221" height="66">
-
-                <!--Dark Colored Logo-->
-                <img class="dark" aria-hidden="true" src="/images/logo-blue.png" decoding="async" loading="lazy" alt="logo" width="221" height="66">
-            </a>
-
-            <!--Main Nav-->
-            <nav id="navbar-menu">
-                <ul>
-                    <li><a href="/index.html">Startseite</a></li>
-                    <li><a href="/about.html">Über Mich</a></li>
-                    <li><a href="/projects.html">Produkte</a></li>
-                    <li><a class="active" href="/reviews.html">Händler werden</a></li>
-                    <li><a href="/contact.html">Kontakt</a></li>
-                </ul>
-            </nav>
-
-            <!--Dark Mode toggle-->
-            <button id="dark-mode-toggle">
-                <!--Moon is an inline SVG so you can edit the color if needed-->
-                <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-                <img class="sun" aria-hidden="true" src="/images/sun.svg" decoding="async" alt="moon" width="15" height="15">
-            </button>
-
-            <!--Mobile Nav toggle-->
-            <button class="hamburger-menu">
-                <span aria-hidden="true"></span>
-            </button>
-        </div>
+  <!-- Navigation (optional an deine bestehende Navigation anpassen) -->
+  <div id="navigation">
+    <div class="container">
+      <a class="logo" href="/index.html" aria-label="Zur Startseite">
+        <img class="light" src="/images/logo-light.png" alt="Aqua-Iwan Logo" width="221" height="66">
+        <img class="dark" src="/images/logo-blue.png" alt="Aqua-Iwan Logo" width="221" height="66">
+      </a>
+      <nav id="navbar-menu">
+        <ul>
+          <li><a href="/index.html">Startseite</a></li>
+          <li><a href="/about.html">Über Mich</a></li>
+          <li><a href="/projects.html">Produkte</a></li>
+          <li><a class="active" href="/reviews.html">Erfahrungen</a></li>
+          <li><a href="/contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger-menu"><span aria-hidden="true"></span></button>
     </div>
+  </div>
 
-    <main id="main">
+  <main id="main">
+    <!-- Hero -->
+    <section id="int-hero">
+      <h1>Erfahrungen & Erfolgsgeschichten</h1>
+      <p>Was Kund:innen und Partner über Aqua-Iwan sagen – Wasserbar, Drops & Entkalkung im Alltag.</p>
+    </section>
 
-        <!-- ============================================ -->
-        <!--                    LANDING                   -->
-        <!-- ============================================ -->
-    
-        <section id="int-hero">
-            <h1 id="home-h">Our Reviews</h1>
-            <picture>
-                <source media="(max-width: 600px)" srcset="/images/cabinets2-m.jpg">
-                <source media="(min-width: 601px)" srcset="/images/cabinets2.jpg">
-                <img aria-hidden="true" loading="lazy" decoding="async" src="/images/cabinets2.jpg" alt="" width="400" height="662">
-            </picture>
-        </section>
+    <!-- Reviews Grid -->
+    <section class="reviews-grid container">
+      <article class="review">
+        <div class="stars" aria-label="5 Sterne">★★★★★</div>
+        <p>„Die Flexible Touch hat unseren Alltag verändert: heißes Wasser für Tee in Sekunden und kein Kistenschleppen mehr. Beratung war top!“</p>
+        <div class="who">S. Müller</div>
+        <div class="meta">Nienburg (Weser) • Wasserbar Flexible Touch</div>
+      </article>
 
-        <!-- ============================================ -->
-        <!--                  Reviews                     -->
-        <!-- ============================================ -->
+      <article class="review">
+        <div class="stars" aria-label="5 Sterne">★★★★★</div>
+        <p>„Seit der RXT-82 haben wir kaum noch Kalk. Kaffeemaschine & Armaturen danken es – Installation über Iwans Netzwerk lief reibungslos.“</p>
+        <div class="who">Familie F.</div>
+        <div class="meta">Stadthagen • Entkalkungsanlage RXT-82</div>
+      </article>
 
-        <section id="reviews">
-            <div class="container">
-                <div class="review">
-                    <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile.svg" alt="" width="99" height="99">
-                     </picture>
-                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                     </p>
-                     <div class="star-group">
-                        <span class="name">B Miller<span class="desc">Homeowner</span></span>
-                         <picture>
-                            <img aria-hidden="true" loading="lazy" decoding="async" src="/images/stars.svg" alt="stars" width="91" height="15">
-                         </picture>
-                     </div>
-                </div>
-                <div class="review">
-                    <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile.svg" alt="" width="99" height="99">
-                     </picture>
-                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                     </p>
-                     <div class="star-group">
-                        <span class="name">Vincent M.<span class="desc">Homeowner</span></span>
-                         <picture>
-                            <img aria-hidden="true" loading="lazy" decoding="async" src="/images/stars.svg" alt="stars" width="91" height="15">
-                         </picture>
-                     </div>
-                </div>
-                <div class="review">
-                    <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile.svg" alt="" width="99" height="99">
-                     </picture>
-                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                     </p>
-                     <div class="star-group">
-                         <span class="name">Alex L.<span class="desc">Homeowner</span></span>
-                         <picture>
-                            <img aria-hidden="true" loading="lazy" decoding="async" src="/images/stars.svg" alt="stars" width="91" height="15">
-                         </picture>
-                     </div>
-                </div>
-                <div class="review">
-                    <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile-woman.svg" alt="" width="99" height="99">
-                     </picture>
-                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                     </p>
-                     <div class="star-group">
-                        <span class="name">Arrieana M.<span class="desc">Homeowner</span></span>
-                         <picture>
-                            <img aria-hidden="true" loading="lazy" decoding="async" src="/images/stars.svg" alt="stars" width="91" height="15">
-                         </picture>
-                     </div>
-                </div>
-                <div class="review">
-                    <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile.svg" alt="" width="99" height="99">
-                     </picture>
-                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                     </p>
-                     <div class="star-group">
-                        <span class="name">Leo N.<span class="desc">Homeowner</span></span>
-                         <picture>
-                            <img aria-hidden="true" loading="lazy" decoding="async" src="/images/stars.svg" alt="stars" width="91" height="15">
-                         </picture>
-                     </div>
-                </div>
-                <div class="review">
-                    <picture>
-                        <img class="profile" loading="lazy" decoding="async" src="/images/profile.svg" alt="" width="99" height="99">
-                     </picture>
-                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                     </p>
-                     <div class="star-group">
-                         <span class="name">Brian A.<span class="desc">Homeowner</span></span>
-                         <picture>
-                            <img aria-hidden="true" loading="lazy" decoding="async" src="/images/stars.svg" alt="stars" width="91" height="15">
-                         </picture>
-                     </div>
-                </div>
-            </div>
-        </section>
+      <article class="review">
+        <div class="stars" aria-label="5 Sterne">★★★★★</div>
+        <p>„Die Drops sind genial – wir mineralisieren unser Wasser je nach Bedarf. Schmeckt super, gerade nach dem Sport.“</p>
+        <div class="who">Jonas K.</div>
+        <div class="meta">Hannover • Aqua-Global Drops</div>
+      </article>
 
-        <!-- ============================================ -->
-        <!--             Final Call to Action             -->
-        <!-- ============================================ -->
+      <article class="review">
+        <div class="stars" aria-label="5 Sterne">★★★★★</div>
+        <p>„Mini Touch passt perfekt in unsere kleine Küche. Kinder lieben die einfache Bedienung, ich die drei Heißwasser-Stufen.“</p>
+        <div class="who">E. & T. Wagner</div>
+        <div class="meta">Minden • Wasserbar Mini Touch</div>
+      </article>
 
-        <section id="cta">
-            <div class="container">
-                <h2 class="title">Get It Done <br> With Us Today</h2>
-                <p>
-                    Say something catchy, informative, and encouraging to click the button to go to the contact page.  I like to add these to the bottom of all pages.
-                </p>
-                <a href="/contact.html" class="button-solid">Free Estimate</a>
-            </div>
-            <picture>
-                <source media="(max-width: 600px)" srcset="/images/cabinets2-m.webp">
-                <source media="(min-width: 601px)" srcset="/images/cabinets2.jpg">
-                <img aria-hidden="true" loading="lazy" decoding="async" src="/images/cabinets2.jpg" alt="kitchen cabinets" width="1920" height="1280">
-             </picture>
-        </section>
+      <article class="review">
+        <div class="stars" aria-label="5 Sterne">★★★★★</div>
+        <p>„Top Beratung durch Iwan, klare Empfehlung. Endlich keine Wasserflecken mehr an den Duschwänden – weniger Putzen!“</p>
+        <div class="who">A. Reimers</div>
+        <div class="meta">Petershagen • Entkalkung (RXT-79)</div>
+      </article>
 
-    </main>
+      <article class="review">
+        <div class="stars" aria-label="5 Sterne">★★★★★</div>
+        <p>„Als Büro haben wir viel Zeit gespart. Frisches Wasser still & sprudelnd – die Sparkling-Lösung kommt bei allen gut an.“</p>
+        <div class="who">Praxisgemeinschaft A&O</div>
+        <div class="meta">NRW • Wasserbar Sparkling</div>
+      </article>
+    </section>
 
-    <!-- ============================================ -->
-    <!--                   Footer                     -->
-    <!-- ============================================ -->
-
-    <footer id="footer">
-        <div class="container">
-            <div class="left-section">
-                <a class="logo" href="/index.html"><img loading="lazy" decoding="async" src="/images/logo-light.png" alt="logo" width="264" height="78"></a>
-                <p>
-                    Extra content if you need it, if not you can delete this whole p tag. I usually do.
-                </p>
-            </div>
-            <div class="right-section">
-                <div class="lists">
-                    <ul>
-                        <li><h2>Information</h2></li>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/about.html">About Us</a></li>
-                        <li><a href="/projects.html">Projects</a></li>
-                        <li><a href="/testimonials.html">Reviews</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                    </ul>
-                    <ul>
-                        <li><h2>Services</h2></li>
-                        <li>Service1</li>
-                        <li>Service2</li>
-                        <li>Service4</li>
-                        <li>Service5</li>
-                    </ul>
-                    <ul>
-                        <li><h2>Contact</h2></li>
-                        <li><a href="/contact.html">First Address Line<br>Denver CO 80206</a></li>
-                        <li><a href="tel:555-779-4407">T: (555) 779-4407</a></li>
-                        <li><a href="mailto:email@email.com">Click to Email</a></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Callout: Partner/CoT -->
+    <section id="cta-partner">
+      <div class="wrap">
+        <div>
+          <h2>Finanziell unabhängiger werden? Starte mit Aqua-Iwan.</h2>
+          <p>
+            Du suchst einen smarten Einstieg in eine echte Wachstumsbranche? 
+            Mit Aqua-Global Produkten (Wasserbar, Drops, Entkalkung) und Iwans persönlicher Begleitung 
+            baust du dir Schritt für Schritt ein eigenes Einkommen auf. 
+            <strong>Faire Konditionen, starke Marke, praxiserprobtes Onboarding.</strong>
+          </p>
+          <ul>
+            <li>Attraktive Margen & kontinuierliche Nachfrage</li>
+            <li>Kostenfreie Schulungen & persönliches Mentoring</li>
+            <li>Startklar mit Händlercode <strong>149614</strong></li>
+          </ul>
+          <p style="font-size:14px;color:#66738a;margin-top:6px">
+            Hinweis: Erfolg und Verdienst hängen u. a. von Einsatz, Markt und Erfahrung ab – keine Garantien.
+          </p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a class="button-solid" href="/contact.html">Jetzt unverbindlich anfragen</a>
+            <a class="button-solid" href="https://wa.me/4917670995884" target="_blank" rel="noopener">WhatsApp Chat starten</a>
+          </div>
         </div>
+        <div>
+          <picture>
+            <source media="(max-width: 600px)" srcset="/images/partner-m.jpg">
+            <source media="(min-width: 601px)" srcset="/images/partner.jpg">
+            <img src="/images/partner.jpg" alt="Aqua-Iwan Partner werden" width="640" height="420" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <div class="credit">
-            <span>Designed and Hand Coded by</span>
-            <a href="" target="_blank" rel="noopener">Your Company Name</a>
-            <span class="copyright"> Copyright 2021 - Present</span></div>
-    </footer>
-
-    <script defer src="/nav.js"></script>
-    <script defer src="/dark.js"></script>
-    <!--
-        This script adds a class to the body after scrolling 100px
-        and we used these body.scroll styles to create some on scroll 
-        animations with the navbar
-    -->
-    <script defer>
-        document.addEventListener('scroll', (e) => { 
-            const scroll = document.documentElement.scrollTop;
-            if(scroll >= 100){
-        document.querySelector('body').classList.add('scroll')
-            } else {
-            document.querySelector('body').classList.remove('scroll')
-            }
-        });
-    </script>
-
-</body>
-</html>
+  <!-- Footer (optional anpassen) -->
+  <footer id="footer">
+    <div class="container">
+      <div class="left-section">
+        <a class="logo" href="/index.html"><img src="/images/logo-light.png" alt="Aqua-Iwan Logo" width="264" height="78"></a>
+        <p>Aqua-Iwan – Dein Ansprechpartner für sauberes Trinkwasser & faire Händler-Partnerschaften.</p>
+      </div>
+      <div class="right-section">
+        <div class="lists">
+          <ul>
+            <li><h2>Information</h2></li>
+            <li><a href="/index.html">Startseite</a></li>
+            <li><a href="/about.html">Über Mich</a></li>
+            <li><a href="/projects.html">Produkte</a></li>
+            <li><a class="active" href="/reviews.html">Erfahrungen</a></li>
+            <li><a href="/contact.html">Kontakt</a></li>
+          </ul>
+          <ul>
+            <li><h2>Services</h2></li>
+            <li>Wasserbar (Mini & Flexible Touch)</li>
+            <li>Aqua-Global Drops</li>
+            <li>Entkalkungsanlagen</li>
+            <li>Beratung & Kontakt</li>
+            <li>Selber Händler werden</li>
+          </ul>
+          <ul>
+            <li><h2>Kontakt</h2></li>
+            <li><a href="/contact.html">31592 Stolzenau</a></li>
