@@ -352,39 +352,239 @@
     display: none;
   }
 }
-/* Reviews zentriert, ohne Profilbild, Sterne oben */
+/* ==== Reviews im "Bewertungsportal"-Stil ===================== */
+
+/* Karte / Container */
 #reviews .review{
-  text-align:center;
-  align-items:center;
-  padding:2.5em 1.5em;
-}
-#reviews .review .profile{ display:none !important; }
-
-#reviews .review p{
-  text-align:center !important;
-  font-size:1.125em;
-  line-height:1.6;
-  margin:1em auto;
-  max-width:40em;
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  box-shadow: 0 6px 12px rgba(0,0,0,.04);
+  border-radius:10px;
+  padding:16px 18px;
+  margin:16px 0;
 }
 
+/* Avatar wieder sichtbar und als runder Badge */
+#reviews .review .profile{
+  display:block !important;
+  width:44px; height:44px;
+  border-radius:50%;
+  background:#0b6cff0d;           /* dezenter Aqua-Ring */
+  padding:6px;                     /* etwas Luft um das SVG */
+  object-fit:cover;
+}
+
+/* Content-Spalte */
+#reviews .review picture + p,
 #reviews .review .star-group{
-  flex-direction:column;
-  justify-content:center;
-  border-top:none;
-  margin-top:1.5em;
-  gap:.5em;
+  width:100%;
 }
-#reviews .review .star-group img{
-  width:7em; height:auto; margin:0 auto;
+
+/* Kopfzeile (Name/Desc links, Verifiziert rechts) */
+#reviews .review .star-group{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-top:none;                 /* alte Linie entfernen */
+  padding-top:0;
+  margin-top:0;
+  gap:12px;
 }
+
+/* Linke Seite in der Kopfzeile: Name + Desc im Block */
 #reviews .review .star-group .name{
-  font-weight:700; text-align:center; margin-top:.3em;
+  display:block;
+  font-weight:700;
+  color:#0e1726;
+  line-height:1.2;
 }
 #reviews .review .star-group .desc{
-  text-align:center; font-weight:400; font-size:.95em; opacity:.8;
+  display:block;
+  margin-top:2px;
+  font-weight:400;
+  color:#667085;                   /* dezentes Grau */
+  font-size:.92em;
 }
-@media (max-width:640px){
-  #reviews .review p{ font-size:1em; max-width:90%; }
-  #reviews .review .star-group img{ width:6.25em; }
+
+/* Rechte Seite: Verifiziert-Badge via ::after */
+#reviews .review .star-group::after{
+  content:"Verifiziert";
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:.85em;
+  font-weight:600;
+  color:#155e3b;
+  background:#e7f6ee;
+  border:1px solid #c7ead9;
+  border-radius:999px;
+  padding:4px 10px;
+  white-space:nowrap;
 }
+/* kleines Shield-Icon vor dem Text */
+#reviews .review .star-group::after{
+  --icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%23155e3b'><path d='M12 2l7 3v6c0 5-3.4 9.4-7 11-3.6-1.6-7-6-7-11V5l7-3zm-1 12l6-6-1.4-1.4L11 11.2 8.4 8.6 7 10l4 4z'/></svg>");
+}
+#reviews .review .star-group::after{
+  background-image: var(--icon);
+  background-repeat:no-repeat;
+  background-size:14px 14px;
+  background-position:8px center;
+  padding-left:28px;               /* Platz fürs Icon */
+}
+
+/* Sterne-Zeile unter die Kopfzeile setzen */
+#reviews .review .star-group picture{
+  order: 1;                        /* rechts vom Namen bleibt Badge */
+  display:none;                    /* wir blenden das alte PNG aus … */
+}
+/* … und ersetzen es durch echte Sterne als Text (★★★★★) */
+#reviews .review .star-group::before{
+  content:"★★★★★";
+  color:#f59e0b;                   /* Goldgelb */
+  letter-spacing:1px;
+  font-size:1rem;
+  font-weight:700;
+  margin-top:6px;
+  display:block;
+}
+
+/* Text der Bewertung */
+#reviews .review p{
+  margin-top:10px;
+  margin-bottom:0;
+  font-size:1.02rem;
+  line-height:1.6;
+  color:#0e1726;
+}
+/* ==== Reviews im "Bewertungsportal"-Stil ===================== */
+
+/* Karte / Container */
+#reviews .review{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  box-shadow: 0 6px 12px rgba(0,0,0,.04);
+  border-radius:10px;
+  padding:16px 18px;
+  margin:16px 0;
+}
+
+/* Avatar wieder sichtbar und als runder Badge */
+#reviews .review .profile{
+  display:block !important;
+  width:44px; height:44px;
+  border-radius:50%;
+  background:#0b6cff0d;           /* dezenter Aqua-Ring */
+  padding:6px;                     /* etwas Luft um das SVG */
+  object-fit:cover;
+}
+
+/* Content-Spalte */
+#reviews .review picture + p,
+#reviews .review .star-group{
+  width:100%;
+}
+
+/* Kopfzeile (Name/Desc links, Verifiziert rechts) */
+#reviews .review .star-group{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-top:none;                 /* alte Linie entfernen */
+  padding-top:0;
+  margin-top:0;
+  gap:12px;
+}
+
+/* Linke Seite in der Kopfzeile: Name + Desc im Block */
+#reviews .review .star-group .name{
+  display:block;
+  font-weight:700;
+  color:#0e1726;
+  line-height:1.2;
+}
+#reviews .review .star-group .desc{
+  display:block;
+  margin-top:2px;
+  font-weight:400;
+  color:#667085;                   /* dezentes Grau */
+  font-size:.92em;
+}
+
+/* Rechte Seite: Verifiziert-Badge via ::after */
+#reviews .review .star-group::after{
+  content:"Verifiziert";
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:.85em;
+  font-weight:600;
+  color:#155e3b;
+  background:#e7f6ee;
+  border:1px solid #c7ead9;
+  border-radius:999px;
+  padding:4px 10px;
+  white-space:nowrap;
+}
+/* kleines Shield-Icon vor dem Text */
+#reviews .review .star-group::after{
+  --icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%23155e3b'><path d='M12 2l7 3v6c0 5-3.4 9.4-7 11-3.6-1.6-7-6-7-11V5l7-3zm-1 12l6-6-1.4-1.4L11 11.2 8.4 8.6 7 10l4 4z'/></svg>");
+}
+#reviews .review .star-group::after{
+  background-image: var(--icon);
+  background-repeat:no-repeat;
+  background-size:14px 14px;
+  background-position:8px center;
+  padding-left:28px;               /* Platz fürs Icon */
+}
+
+/* Sterne-Zeile unter die Kopfzeile setzen */
+#reviews .review .star-group picture{
+  order: 1;                        /* rechts vom Namen bleibt Badge */
+  display:none;                    /* wir blenden das alte PNG aus … */
+}
+/* … und ersetzen es durch echte Sterne als Text (★★★★★) */
+#reviews .review .star-group::before{
+  content:"★★★★★";
+  color:#f59e0b;                   /* Goldgelb */
+  letter-spacing:1px;
+  font-size:1rem;
+  font-weight:700;
+  margin-top:6px;
+  display:block;
+}
+
+/* Text der Bewertung */
+#reviews .review p{
+  margin-top:10px;
+  margin-bottom:0;
+  font-size:1.02rem;
+  line-height:1.6;
+  color:#0e1726;
+}
+
+/* Responsive: auf kleineren Screens alles mittig untereinander */
+@media (max-width: 640px){
+  #reviews .review{
+    flex-direction:column;
+    text-align:center;
+    padding:18px 16px 20px;
+  }
+  #reviews .review .star-group{
+    flex-direction:column;
+    gap:6px;
+  }
+  #reviews .review .profile{
+    margin:0 auto 6px;
+  }
+  #reviews .review p{
+    margin-top:12px;
+  }
+}
+
