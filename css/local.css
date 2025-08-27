@@ -352,3 +352,39 @@
     display: none;
   }
 }
+/* Reviews zentriert, ohne Profilbild, Sterne oben */
+#reviews .review{
+  text-align:center;
+  align-items:center;
+  padding:2.5em 1.5em;
+}
+#reviews .review .profile{ display:none !important; }
+
+#reviews .review p{
+  text-align:center !important;
+  font-size:1.125em;
+  line-height:1.6;
+  margin:1em auto;
+  max-width:40em;
+}
+
+#reviews .review .star-group{
+  flex-direction:column;
+  justify-content:center;
+  border-top:none;
+  margin-top:1.5em;
+  gap:.5em;
+}
+#reviews .review .star-group img{
+  width:7em; height:auto; margin:0 auto;
+}
+#reviews .review .star-group .name{
+  font-weight:700; text-align:center; margin-top:.3em;
+}
+#reviews .review .star-group .desc{
+  text-align:center; font-weight:400; font-size:.95em; opacity:.8;
+}
+@media (max-width:640px){
+  #reviews .review p{ font-size:1em; max-width:90%; }
+  #reviews .review .star-group img{ width:6.25em; }
+}
